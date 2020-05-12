@@ -299,7 +299,16 @@ public class Testing {
 		
 		
 		Map<Integer, String> primeOneMapVN = new LinkedHashMap<>();
-		primeOneMapVN.put(inversionZeroVals.get(1), evenNewerTest.get(1));
+		primeOneMapVN.put(inversionZeroVals.get(1), inversionZeroNotes.get(1));
+		for (int i = 1; i < 12; i++) {
+			if (i + inversionZeroVals.get(1) >= 12) {
+				int temp = (i + inversionZeroVals.get(1)) - 12;
+				primeOneMapVN.put(temp, inversionZeroNotes.get(temp));
+			}
+			else {
+				primeOneMapVN.put(i + inversionZeroVals.get(1), evenNewerTest.get(i + inversionZeroVals.get(1)));
+			}
+		}
 		
 		
 		
